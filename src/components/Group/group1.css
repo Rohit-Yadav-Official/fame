@@ -1,0 +1,78 @@
+
+
+.bounty-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+    background: linear-gradient(155deg, #000000, #2617562f);
+}
+
+.content {
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Title & Subtitle */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.feature {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+
+.cta-button-container {
+    display: flex;
+    justify-content: center; /* Center Horizontally */
+    align-items: center; /* Center Vertically (if needed) */
+    width: 100%;
+    margin-top: 20px; /* Space from other elements */
+}
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+   
+    margin-top: 25px;
+    padding: 12px 15px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #0000005b;
+    color: white;
+}

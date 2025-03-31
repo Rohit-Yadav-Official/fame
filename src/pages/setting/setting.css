@@ -1,0 +1,99 @@
+/* Wallets Page Layout */
+.wallets-container {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 200px;
+    border-right: 1px solid #ddd;
+    padding-right: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .sidebar li.active {
+    font-weight: bold;
+    border-left: 3px solid orange;
+    padding-left: 7px;
+  }
+  
+  /* Wallets Content */
+  .wallets-content {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .wallets-content h2 {
+    font-size: 18px;
+  }
+  
+  .wallets-content p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Wallet Section */
+  .wallet-section {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .wallet-description {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  /* Button */
+  .link-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .link-button:hover {
+    background-color: darkorange;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .wallets-container {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .sidebar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+  
+    .sidebar ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    .wallets-content {
+      padding-left: 0;
+    }
+  }
+  

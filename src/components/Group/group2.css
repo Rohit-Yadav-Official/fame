@@ -1,0 +1,86 @@
+/* Main Section Styling */
+.bounty-container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  padding: 20px ;
+  background: linear-gradient(45deg, #000000, #26175682);
+
+}
+
+.bounty-containerow1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap; 
+  text-align: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+/* Image Container */
+.bounty-image-container {
+ 
+  position: relative;
+  width: 90%;
+  max-width: 350px;
+}
+.bounty-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.bounty-text {
+  margin-top: 20px;
+  max-width: 600px;
+  background: transparent;
+}
+
+/* LOGO SLIDER SECTION */
+.logo-slider-container {
+  margin-top: 50px;
+  width: 80%;
+  text-align: center;
+}
+
+.logo-slider-container h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Logo Scrolling Effect */
+.logo-slider {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Moving Logo Track */
+.logo-track {
+  display: flex;
+  width: 200%; /* Allows smooth cycling */
+  gap: 40px;
+  animation: scrollLeft 15s linear infinite;
+}
+
+/* Each Logo */
+.logo {
+  height: 50px;
+  width: auto;
+  flex: 0 0 auto;
+}
+
+/* Smooth Scrolling Animation */
+@keyframes scrollLeft {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-50%);
+  }
+}

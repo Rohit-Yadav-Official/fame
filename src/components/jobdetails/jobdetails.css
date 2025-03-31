@@ -1,0 +1,115 @@
+.job-details {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* Move entire content to the left */
+}
+
+.header {
+  display: flex;
+  
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.company-img {
+  width: 40px;   /* Reduced size */
+  height: 40px;  /* Reduced size */
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+}
+.link-img{
+  
+  width: 60px;   /* Reduced size */
+  height: 60px;
+    /* Reduced size */
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+ 
+}
+.middle-column {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+.middle-clm2{
+  display: flex;
+  
+  align-items: center; /* Aligns company name & icon in the same row */
+  gap: 8px;
+  
+}
+.job-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.company {
+  font-size: 14px;
+  color: #555;
+}
+
+.apply-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.apply-btn:hover {
+  background-color: #0056b3;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+  text-align: left;
+  margin: 10px 0;
+  color:bisque
+}
+
+.section h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.section p, .section ul {
+  font-size: 14px;
+  color: #f4f3f3;
+  margin-left: 0;  /* Ensure text starts from the left edge */
+  padding-left: 0;
+  white-space: normal; /* Allows text to wrap to the next line */
+  word-wrap: break-word; /* Ensures long words break instead of overflowing */
+  overflow-wrap: break-word; /* Alternative for better browser support */
+  display: block; /* Ensure it's a block element */
+  max-width: 100%; /* Prevent overflow */
+}
+
+.section ul {
+  list-style-type: disc;
+  padding-left: 15px;
+}
+
+.bottom-btn {
+  align-self: flex-start;
+  margin-top: 10px;
+}

@@ -1,0 +1,248 @@
+.bounty-pages {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-box {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-input {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  align-items: right;
+}
+
+.bounty-container5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  margin-right: 50px;
+}
+
+.bounty-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+}
+
+.bounty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.expired {
+  align-items: left;
+  display: block;
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.active {
+  align-items: left;
+  display: block;
+  color: #030303;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.bounty-title {
+text-align: left;
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.reward {
+  font-size: 18px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.amount {
+  font-weight: bold;
+   color :orange;
+
+
+
+
+}
+
+.amount-in-usd {
+  color: #888;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 15px 0;
+}
+
+.tag {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.company-name {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+.company-type {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+.middle-section{
+
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  width: fit-content; /* Ensures it only takes as much space as needed */
+  max-width: 100%; /* Prevents overflow on smaller screens */
+  align-self: flex-start;
+  margin-left: 23px;
+  
+  /* Ensures it doesn’t stretch unnecessarily */
+  
+}
+
+.sponsor-box, .stats, .how-it-works {
+  background: #dfe3f0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sponsor-box h3,
+.how-it-works h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sponsor-box p, .stats p, .how-it-works ul {
+  color: #555;
+  font-size: 14px;
+}
+
+.stats p strong {
+  font-size: 20px;
+  color: #4f46e5;
+}
+.scrolling-list-amount{
+  color: #4f46e5;
+}
+
+.how-it-works ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.how-it-works ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.how-it-works ul li::before {
+  content: "✓";
+  color: #4f46e5;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 12px;
+  }
+
+  .sponsor-box, .stats, .how-it-works {
+    padding: 16px;
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+
+.scrolling-list {
+  overflow: hidden;
+  height: 300px; /* Adjust based on your content height */
+  position: relative;
+  background-color: #7c7c7c;
+
+}
+
+.scrolling-list ul {
+  animation: scrollDown 10s linear infinite;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scrolling-list li {
+  padding: 10px;
+  color: #444343ce;
+  background-color: #dfe3f0;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.earned-list-avatar{
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.recent-learners{
+
+ color:gray;
+ margin-bottom: -13px;
+}

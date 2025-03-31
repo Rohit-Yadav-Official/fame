@@ -1,0 +1,80 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Job Dashboard */
+  .job-dashboard {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #0f0f0f;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Search Bar */
+  .search-container {
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Job List and Details */
+  .job-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Job List */
+  .job-list {
+    width: 35%;
+    max-height: 800px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border-right: 2px solid #ddd;
+    padding-right: 10px;
+  }
+  
+  /* Job Card */
+  .job-card {
+    padding: 15px;
+    border-bottom: 1px solid #151e5d;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .job-card:hover {
+    background-color: #3a36ad89;
+  }
+  
+  .selected {
+    background-color: #e3f2fd3d;
+  }
+  
+  .job-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .job-company {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .job-salary {
+    font-size: 14px;
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  /* Job Details */
+  

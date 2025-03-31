@@ -1,0 +1,102 @@
+.footer-container {
+    background: linear-gradient(180deg, #000000, #26175690);
+    color: white;
+    padding: 3rem 5%;
+}
+.glossy-text {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #222, #000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 
+        0px 2px 5px rgba(255, 255, 255, 0.2), 
+        0px 4px 10px rgba(0, 0, 0, 0.8), 
+        0px 10px 15px rgba(0, 0, 0, 0.9);
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Left Section - Address and Social Icons */
+.footer-left {
+    max-width: 250px;
+}
+
+.footer-left p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #ccc;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+/* Right Section - Links */
+.footer-links {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.footer-links h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: white;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-links li:hover {
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+}

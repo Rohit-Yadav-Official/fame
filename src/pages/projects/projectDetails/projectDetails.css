@@ -1,0 +1,190 @@
+.project-details-container {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    background: #f9f9f9;
+}
+
+.left-section {
+    flex: 1;
+    max-width: 40%;
+}
+.left-section h1 {
+    color: black;
+}
+
+.project-banner {
+    width: 100%;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.project-description {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.projects-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.projects-tag {
+    background:  rgb(149, 135, 242);
+    color: white;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.action-buttons button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.bookmark-btn {
+    background: #ff8800;
+    color: white;
+}
+
+.upvote-btn {
+    background: #007bff;
+    color: white;
+}
+
+.collection-btn {
+    background: #333;
+    color: white;
+}
+
+.members-section {
+    margin-top: 30px;
+}
+
+.members-section h3 {
+    color: black;
+}
+
+.member-list {
+    display: flex;
+    gap: 15px;
+}
+
+.member {
+    text-align: center;
+}
+.member p {
+    color: black;
+}
+
+.member img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.right-section {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.right-section p{
+
+    color:rgba(10, 10, 10, 0.729);
+
+}
+
+
+.right-section h2 {
+    color: black;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.right-section-ul {
+    color:rgba(10, 10, 10, 0.729);
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.github-link {
+    margin-top: 20px;
+}
+
+.github-link a {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .project-details-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left-section, .right-section {
+      width: 100%;
+    }
+  
+    .project-banner {
+      width: 100%;
+      max-width: 400px;
+    }
+  
+    .projects-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+    }
+  
+    .member-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .action-buttons button {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+  
+    .github-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
