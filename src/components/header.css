@@ -1,43 +1,119 @@
 
 
 .header{
-
-    width:98%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 10px 20px;
     background-color: #333;
-    padding-left: 10px;
-    padding-right: 15px;
     position: relative;
-
+    box-sizing: border-box;
 }
+
+.header-brand {
+    flex-shrink: 0;
+}
+
+.header-brand h1 {
+    cursor: pointer;
+    margin: 0;
+    color: white;
+}
+/* Desktop Navigation */
+.desktop-nav {
+    display: flex;
+}
+
 .header-ul {
-    list-style: none; /* Remove bullet points */
+    list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Make list items horizontal */
-  }
+    display: flex;
+    gap: 20px;
+}
+
+.header-ul-li {
+    text-decoration: none;
+    color: #f0e9e9;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.header-ul-li:hover {
+    color: #6981dd;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    gap: 4px;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    border-top: 1px solid #555;
+    z-index: 1000;
+}
+
+.mobile-nav-open {
+    display: block;
+}
+
+.mobile-header-ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mobile-header-ul-li {
+    text-decoration: none;
+    color: #f0e9e9;
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 1px solid #555;
+    transition: color 0.3s ease;
+}
+
+.mobile-header-ul-li:hover {
+    color: #6981dd;
+}
   
-  .header-ul-li {
-    margin-left: 20px; /* Space between list items */
-    text-decoration: none; /* Remove underlines from links */
-    color: #f0e9e9; /* Example link color */
-  }
-  
-  /* Optional: Style the active/hover states of the links */
-  .header-ul-li:hover {
-    color:#6981dd; /* Example hover color */
-  }
-  
-  .header-btn {
+.header-btn {
     display: flex; 
     align-items: center;
     justify-content: space-between;
     padding: 10px 0px;
-    /* Ensures buttons are side by side */
-  }
+    gap: 10px;
+}
+
+/* User Profile Section */
+.user-profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
   .button {
     cursor: pointer;
     border: 0;
@@ -114,3 +190,85 @@
   .logout {
     color: red;
   }
+
+/* Responsive Design */
+/* Tablet and below */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .header {
+        padding: 10px 15px;
+    }
+    
+    .header-brand h1 {
+        font-size: 1.5rem;
+    }
+    
+    .user-profile {
+        margin-right: 0;
+    }
+    
+    .avatar {
+        height: 35px;
+        width: 35px;
+    }
+    
+    .dropdown-card {
+        right: -10px;
+        width: 150px;
+        margin-right: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .header {
+        padding: 8px 10px;
+    }
+    
+    .header-brand h1 {
+        font-size: 1.3rem;
+    }
+    
+    .button {
+        width: 80px;
+        padding: 8px 0;
+        font-size: 0.9rem;
+    }
+    
+    .avatar {
+        height: 30px;
+        width: 30px;
+    }
+    
+    .dropdown-card {
+        width: 140px;
+        padding: 10px;
+    }
+    
+    .dropdown-item {
+        font-size: 13px;
+        padding: 6px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .header {
+        padding: 15px 40px;
+    }
+    
+    .header-ul {
+        gap: 30px;
+    }
+    
+    .header-ul-li {
+        font-size: 1.1rem;
+    }
+}

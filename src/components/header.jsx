@@ -1,6 +1,5 @@
-import React ,{useState,useEffect }from 'react';
+import {useState,useEffect }from 'react';
 import '../components/header.css'
-import Login from "../pages/login/login"
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 function Header() {
@@ -8,6 +7,7 @@ function Header() {
    
   const [user, setUser] = useState(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   let timeoutId = null;
   useEffect(() => {
     // Check if the user is logged in by looking for the JWT token
@@ -56,18 +56,47 @@ function Header() {
   const handleMouseLeave = () => {
     timeoutId = setTimeout(() => setDropdownOpen(false), 100); // Add delay to prevent flickering
   };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <div className="header">
-      <div>
+      <div className="header-brand">
         <h1 className="text-2xl font-bold" onClick={() => navigate('/')}>Fame</h1>
       </div>
-      <nav>
-        <ul className=" header-ul">
+      
+      {/* Mobile Menu Button */}
+      <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
+        <span className="hamburger-line"></span>
+        <span className="hamburger-line"></span>
+        <span className="hamburger-line"></span>
+      </button>
+
+      {/* Desktop Navigation */}
+      <nav className="desktop-nav">
+        <ul className="header-ul">
           <li><a href="" className="header-ul-li" onClick={() => navigate('/jobs')}>Jobs </a></li>
           <li><a href="" className="header-ul-li"  onClick={() => navigate('/bounty')}>Bountys</a></li>
           <li><a href="" className="header-ul-li"   onClick={() => navigate('/project')}>Projects</a></li>
           <li><a href="" className="header-ul-li"  onClick={() => navigate('/hackathon')}>Hackathons</a></li>
           <li><a href="" className="header-ul-li">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      {/* Mobile Navigation */}
+      <nav className={`mobile-nav ${mobileMenuOpen ? 'mobile-nav-open' : ''}`}>
+        <ul className="mobile-header-ul">
+          <li><a href="" className="mobile-header-ul-li" onClick={() => {navigate('/jobs'); closeMobileMenu();}}>Jobs </a></li>
+          <li><a href="" className="mobile-header-ul-li"  onClick={() => {navigate('/bounty'); closeMobileMenu();}}>Bountys</a></li>
+          <li><a href="" className="mobile-header-ul-li"   onClick={() => {navigate('/project'); closeMobileMenu();}}>Projects</a></li>
+          <li><a href="" className="mobile-header-ul-li"  onClick={() => {navigate('/hackathon'); closeMobileMenu();}}>Hackathons</a></li>
+          <li><a href="" className="mobile-header-ul-li" onClick={closeMobileMenu}>Contact Us</a></li>
         </ul>
       </nav>
       {user ? (

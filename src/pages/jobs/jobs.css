@@ -8,12 +8,13 @@ body {
   
   /* Job Dashboard */
   .job-dashboard {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     background: #0f0f0f;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
   }
   
   /* Search Bar */
@@ -23,15 +24,26 @@ body {
   
   .search-input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px 16px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: #6981dd;
+    box-shadow: 0 0 0 2px rgba(105, 129, 221, 0.2);
   }
   
   /* Job List and Details */
   .job-container {
     display: flex;
     gap: 20px;
+    min-height: 600px;
   }
   
   /* Job List */
@@ -39,9 +51,10 @@ body {
     width: 35%;
     max-height: 800px;
     overflow-y: auto;
-    overflow-x: auto;
-    border-right: 2px solid #ddd;
-    padding-right: 10px;
+    overflow-x: hidden;
+    border-right: 2px solid #333;
+    padding-right: 15px;
+    box-sizing: border-box;
   }
   
   /* Job Card */
@@ -77,4 +90,84 @@ body {
   }
   
   /* Job Details */
+  .job-detail-section {
+    flex: 1;
+    padding-left: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Responsive Design */
+  /* Tablet */
+  @media (max-width: 768px) {
+    .job-dashboard {
+      margin: 10px;
+      padding: 15px;
+    }
+
+    .job-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .job-list {
+      width: 100%;
+      max-height: 300px;
+      border-right: none;
+      border-bottom: 2px solid #333;
+      padding-right: 0;
+      padding-bottom: 15px;
+    }
+
+    .job-detail-section {
+      padding-left: 0;
+    }
+
+    .search-input {
+      font-size: 16px; /* Prevents zoom on iOS */
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 480px) {
+    .job-dashboard {
+      margin: 5px;
+      padding: 10px;
+    }
+
+    .job-list {
+      max-height: 250px;
+    }
+
+    .job-card {
+      padding: 12px;
+    }
+
+    .job-title {
+      font-size: 14px;
+    }
+
+    .job-company {
+      font-size: 12px;
+    }
+
+    .job-salary {
+      font-size: 12px;
+    }
+  }
+
+  /* Large screens */
+  @media (min-width: 1200px) {
+    .job-dashboard {
+      max-width: 1400px;
+      padding: 30px;
+    }
+
+    .job-container {
+      gap: 30px;
+    }
+
+    .job-list {
+      width: 40%;
+    }
+  }
   
